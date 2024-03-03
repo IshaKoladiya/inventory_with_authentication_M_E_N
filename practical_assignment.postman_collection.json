@@ -1,0 +1,566 @@
+{
+	"info": {
+		"_postman_id": "ecc728f4-57b4-4e20-a525-e0f8f951129a",
+		"name": "practical_assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28379356"
+	},
+	"item": [
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n    \"email\": \"ankit4@gmail.com\",\n    \"username\": \"Ankit Koladiya\",\n    \"password\": \"223456\",\n    \"role\":\"admin\"\n}"
+				},
+				"url": "http://localhost:8000/users/register"
+			},
+			"response": [
+				{
+					"name": "user register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n    \"email\": \"ankit4@gmail.com\",\n    \"username\": \"Ankit Koladiya\",\n    \"password\": \"223456\",\n    \"role\":\"admin\"\n}"
+						},
+						"url": "http://localhost:8000/users/register"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "328"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"148-HjpfJGEHNR1p3sWKlFJBtgBZiA0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 11:24:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"username\": \"Ankit Koladiya\",\n        \"email\": \"ankit4@gmail.com\",\n        \"password\": \"$2b$10$K4v6bWGDT3JGS2y.4Mmy3u.9/OrIQahjJVtUhj/WFiIoHxPXS43Mm\",\n        \"role\": \"admin\",\n        \"_id\": \"65e30c6fc19bfb4994ecef71\",\n        \"created_at\": \"2024-03-02T11:24:31.235Z\",\n        \"updated_at\": \"2024-03-02T11:24:31.235Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ankit4@gmail.com\",\r\n    \"password\": \"223456\"\r\n}"
+				},
+				"url": "http://localhost:8000/users/login"
+			},
+			"response": [
+				{
+					"name": "user login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ankit4@gmail.com\",\r\n    \"password\": \"223456\"\r\n}"
+						},
+						"url": "http://localhost:8000/users/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "553"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"229-2EbzdHqX5SusZZXmOjTm28We5Ro\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 11:24:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User logged in successfully\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"65e30c6fc19bfb4994ecef71\",\n            \"username\": \"Ankit Koladiya\",\n            \"email\": \"ankit4@gmail.com\",\n            \"password\": \"$2b$10$K4v6bWGDT3JGS2y.4Mmy3u.9/OrIQahjJVtUhj/WFiIoHxPXS43Mm\",\n            \"role\": \"admin\",\n            \"created_at\": \"2024-03-02T11:24:31.235Z\",\n            \"updated_at\": \"2024-03-02T11:24:31.235Z\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"shirt\",\r\n    \"price\":200,\r\n    \"category\":\"Garment\",\r\n    \"description\":\"shirt is very cool\",\r\n    \"image\":\"test\",\r\n    \"stock\":10,\r\n    \"status\":true\r\n\r\n}"
+				},
+				"url": "http://localhost:8000/product"
+			},
+			"response": [
+				{
+					"name": "add product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"shirt\",\r\n    \"price\":200,\r\n    \"category\":\"Garment\",\r\n    \"description\":\"shirt is very cool\",\r\n    \"image\":\"test\",\r\n    \"stock\":10,\r\n    \"status\":true\r\n\r\n}"
+						},
+						"url": "http://localhost:8000/product"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "320"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"140-byCqofH5O2FBsQoxsrqZwNWdNRU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 11:25:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product created successfully\",\n    \"data\": {\n        \"product_name\": \"shirt\",\n        \"description\": \"shirt is very cool\",\n        \"price\": 200,\n        \"category\": \"Garment\",\n        \"image\": \"test\",\n        \"stock\": 10,\n        \"status\": \"true\",\n        \"_id\": \"65e30caac19bfb4994ecef75\",\n        \"created_at\": \"2024-03-02T11:25:30.607Z\",\n        \"updated_at\": \"2024-03-02T11:25:30.607Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8000/product"
+			},
+			"response": [
+				{
+					"name": "get product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:8000/product"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"152-u9lhdn/hteDAvdUGiy8hRpK4rgg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 12:30:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"65e3064da231ce04f519decb\",\n            \"product_name\": \"pent\",\n            \"description\": \"shirt is very cool\",\n            \"price\": 200,\n            \"category\": \"65e31501f91b3df9dcb622ae\",\n            \"image\": \"test\",\n            \"stock\": 10,\n            \"status\": \"true\",\n            \"created_at\": \"2024-03-02T10:58:21.509Z\",\n            \"updated_at\": \"2024-03-02T10:58:21.509Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"pent\",\r\n    \"price\":200,\r\n    \"category\":\"65e31501f91b3df9dcb622ae\",\r\n    \"description\":\"shirt is very cool\",\r\n    \"image\":\"test\",\r\n    \"stock\":10,\r\n    \"status\":true\r\n\r\n}"
+				},
+				"url": "http://localhost:8000/product/65e3064da231ce04f519decb"
+			},
+			"response": [
+				{
+					"name": "update product",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"pent\",\r\n    \"price\":200,\r\n    \"category\":\"65e31501f91b3df9dcb622ae\",\r\n    \"description\":\"shirt is very cool\",\r\n    \"image\":\"test\",\r\n    \"stock\":10,\r\n    \"status\":true\r\n\r\n}"
+						},
+						"url": "http://localhost:8000/product/65e3064da231ce04f519decb"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"150-MyHAWap01TNLETch0cY4eaAPrV0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 12:28:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product updated successfully\",\n    \"data\": {\n        \"_id\": \"65e3064da231ce04f519decb\",\n        \"product_name\": \"pent\",\n        \"description\": \"shirt is very cool\",\n        \"price\": 200,\n        \"category\": \"65e31501f91b3df9dcb622ae\",\n        \"image\": \"test\",\n        \"stock\": 10,\n        \"status\": \"true\",\n        \"created_at\": \"2024-03-02T10:58:21.509Z\",\n        \"updated_at\": \"2024-03-02T10:58:21.509Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\": \"pent\",\r\n    \"price\":200,\r\n    \"category\":\"Garment\",\r\n    \"description\":\"shirt is very cool\",\r\n    \"image\":\"test\",\r\n    \"stock\":10,\r\n    \"status\":true\r\n\r\n}"
+				},
+				"url": "http://localhost:8000/product/65e309a68ee4cf530005454e"
+			},
+			"response": [
+				{
+					"name": "delete product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"pent\",\r\n    \"price\":200,\r\n    \"category\":\"Garment\",\r\n    \"description\":\"shirt is very cool\",\r\n    \"image\":\"test\",\r\n    \"stock\":10,\r\n    \"status\":true\r\n\r\n}"
+						},
+						"url": "http://localhost:8000/product/65e309a68ee4cf530005454e"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "320"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"140-ps+qKKPOeG8DF2tFEAoq2iPBFvg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 11:37:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Product deleted successfully\",\n    \"data\": {\n        \"_id\": \"65e309a68ee4cf530005454e\",\n        \"product_name\": \"shirt\",\n        \"description\": \"shirt is very cool\",\n        \"price\": 200,\n        \"category\": \"Garment\",\n        \"image\": \"test\",\n        \"stock\": 10,\n        \"status\": \"true\",\n        \"created_at\": \"2024-03-02T11:12:38.589Z\",\n        \"updated_at\": \"2024-03-02T11:12:38.589Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_name\": \"Garment\"\r\n   \r\n}"
+				},
+				"url": "http://localhost:8000/category"
+			},
+			"response": [
+				{
+					"name": "add category",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"Garments\"\r\n   \r\n}"
+						},
+						"url": "http://localhost:8000/category/65e31501f91b3df9dcb622ae"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6-l9IaERuxVq0O0ztTYZa9UbQ5LV4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 02 Mar 2024 12:01:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Category created successfully\",\n    \"data\": {\n        \"category_name\": \"Garment\",\n        \"_id\": \"65e31501f91b3df9dcb622ae\",\n        \"created_at\": \"2024-03-02T12:01:05.303Z\",\n        \"updated_at\": \"2024-03-02T12:01:05.303Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "categorywise product list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlMzBjNmZjMTliZmI0OTk0ZWNlZjcxIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTcwOTM3ODY4OSwiZXhwIjoxNzA5NDIxODg5fQ.oy8zirR3xy6lCwmUXiqpqbYOO4X7iZYhecfJTz-1uo0"
+					}
+				],
+				"url": "http://localhost:8000/categorywise/product/list"
+			},
+			"response": []
+		}
+	]
+}
